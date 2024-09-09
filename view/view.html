@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/db180e3cb2.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/view.css" />
+    <link rel="stylesheet" href="../view/scss/main.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Onest&display=swap" rel="stylesheet">
+    <title>Document</title>
+  </head>
+  <body class="onest-font noto-sans-jp-font">
+    
+    <header class="header">
+
+      <div class="header__title">
+        <div class="header__title__icon">
+          <i class="ti ti-folder-filled"></i>
+        </div>
+        <h1 class="header__title__h1">FileSystem</h1>
+      </div>
+
+
+      <div class="header__search">
+        <input type="text" name="search" id="" class="header__search__input"  />
+        <div class="header__search__search-btn">
+          <i class="ti ti-search"></i>
+        </div>
+      </div>
+
+      <!--     <i class="ti ti-trash-off"></i>   folder-plus  file-plus    square-rounded-plus-->
+
+      <div class="header__tools">
+        <button class="header__tools__sort-btn header-btn">
+          <i class="ti ti-sort-ascending-letters"></i>
+        </button>
+
+        <button class="header__tools__back-btn header-btn">
+          <i class="ti ti-arrow-back-up"></i>
+        </button>
+
+        <button class="header__tools__delete-btn header-btn">
+          <i class="ti ti-trash"></i>
+        </button>
+
+        <div class="header__tools__create">
+          <button class="header__tools__create__create-btn header-btn">
+            <i class="ti ti-square-rounded-plus"></i>
+          </button>
+
+          <button class="header__tools__create__create-folder-btn header-btn">
+            <i class="ti ti-folder-plus"></i>
+          </button>
+
+          <button class="header__tools__create__create-file-btn header-btn">
+            <i class="ti ti-file-plus"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+
+
+      <!-- <div class="main__create-folder" hidden>
+
+        <div class="main__create-folder__header">
+          <div class="main__create-folder__header__icon">
+            <i class="ti ti-folder-filled"></i>
+          </div>
+          <input type="text" name="" id="" placeholder="new folder" class="main__create-folder__header__input">
+        </div>
+
+        <p class="main__create-folder__path">C:/User/Usuario/Downloads/work/app.js</p>
+
+        
+        
+        <div class="main__create-folder__actions">
+          <button class="main__create-folder__actions__cancel-btn">CANCEL</button>
+          <button class="main__create-folder__actions__create-btn">CREATE</button>
+        </div>
+
+      </div> -->
+
+
+
+
+      <!-- <div class="main__create-file" hidden>
+
+        <div class="main__create-file__header">
+          <div class="main__create-file__header__icon">
+            <i class="ti ti-file-filled"></i>
+          </div>
+          <input type="text" name="" id="" placeholder="new file" class="main__create-file__header__input">
+        </div>
+
+        <p class="main__create-file__path">C:/User/Usuario/Downloads/work/app.js</p>
+
+        <textarea class="main__create-file__content" id="" placeholder="Ingresa el contenido del archivo"></textarea>
+
+        
+        <div class="main__create-file__actions">
+          <button class="main__create-file__actions__cancel-btn">CANCEL</button>
+          <button class="main__create-file__actions__create-btn">CREATE</button>
+        </div>
+      </div> -->
+
+
+
+
+
+
+      <!-- <div class="main__file-info">
+        
+        <div class="main__file-info__header">
+          <div class="main__file-info__header__icon">
+            <i class="ti ti-file-filled"></i>
+          </div>
+          <p class="main__file-info__header__title">file.txt</p>
+        </div>
+
+        <div class="main__file-info__content">
+
+          <div class="main__file-info__content__title">
+            <div class="main__file-info__content__title__icon">
+              <i class="ti ti-file-filled"></i>
+            </div>
+            <input type="text" name="" id="" class="main__file-info__content__title__name" placeholder="file.txt">
+          </div>
+
+          
+          <hr class="main__file-info__content__line">
+
+          <div class="main__file-info__content__section">
+            <p class="main__file-info__content__section__label">Type:</p>
+            <p class="main__file-info__content__section__value">text/html</p>
+          </div>
+
+          
+          <div class="main__file-info__content__section">
+            <p class="main__file-info__content__section__label">Format:</p>
+            <p class="main__file-info__content__section__value">.txt</p>
+          </div>
+
+
+          <hr class="main__file-info__content__line">
+
+
+          <div class="main__file-info__content__section">
+            <p class="main__file-info__content__section__label">Parent:</p>
+            <p class="main__file-info__content__section__value">Usuario</p>
+          </div>
+
+
+          <div class="main__file-info__content__section">
+            <p class="main__file-info__content__section__label">Path:</p>
+            <p class="main__file-info__content__section__value">C:/Usuario/file.txt</p>
+          </div>
+
+          <div class="main__file-info__content__section">
+            <p class="main__file-info__content__section__label">Size:</p>
+            <p class="main__file-info__content__section__value">345 MB</p>
+          </div>
+
+
+          <hr class="main__file-info__content__line">
+
+
+          <div class="main__file-info__content__section">
+            <p class="main__file-info__content__section__label">Created:</p>
+            <p class="main__file-info__content__section__value">martes, 24 febrero 2024, 8:32:23 pm</p>
+          </div>
+
+          <div class="main__file-info__content__section">
+            <p class="main__file-info__content__section__label">Changed:</p>
+            <p class="main__file-info__content__section__value">jueves, 4 maro 2024, 8:32:23 pm</p>
+          </div>
+
+          <div class="main__file-info__content__section">
+            <p class="main__file-info__content__section__label">Opened:</p>
+            <p class="main__file-info__content__section__value">lunes, 27 junio 2024, 8:32:23 pm</p>
+          </div>
+
+
+          <hr class="main__file-info__content__line">
+
+          <div class="main__file-info__content__actions">
+            <button class="main__file-info__content__actions__read-btn info-btn">READ</button>
+            <button class="main__file-info__content__actions__edit-btn info-btn">EDIT</button> 
+            <button class="main__file-info__content__actions__save-btn info-btn">SAVE</button> 
+            
+
+          </div>
+
+
+        </div>
+
+      </div> -->
+
+
+
+
+
+      <!-- <div class="main__folder-info">
+        
+        <div class="main__folder-info__header">
+          <div class="main__folder-info__header__icon">
+            <i class="ti ti-folder-filled"></i>
+          </div>
+          <p class="main__folder-info__header__title">App</p>
+        </div>
+
+        <div class="main__folder-info__content">
+
+          <div class="main__folder-info__content__title">
+            <div class="main__folder-info__content__title__icon">
+              <i class="ti ti-folder-filled"></i>
+            </div>
+            <input type="text" name="" id="" class="main__folder-info__content__title__name" placeholder="App">
+          </div>
+
+          <hr class="main__folder-info__content__line">
+
+          <div class="main__folder-info__content__section">
+            <p class="main__folder-info__content__section__label">Type:</p>
+            <p class="main__folder-info__content__section__value">Folder</p>
+          </div>
+
+          <hr class="main__folder-info__content__line">
+
+
+          <div class="main__folder-info__content__section">
+            <p class="main__folder-info__content__section__label">Parent:</p>
+            <p class="main__folder-info__content__section__value">Usuario</p>
+          </div>
+
+
+          <div class="main__folder-info__content__section">
+            <p class="main__folder-info__content__section__label">Path:</p>
+            <p class="main__folder-info__content__section__value">C:/Usuario/App</p>
+          </div>
+
+          <div class="main__folder-info__content__section">
+            <p class="main__folder-info__content__section__label">Size:</p>
+            <p class="main__folder-info__content__section__value">10 GB</p>
+          </div>
+
+          <div class="main__folder-info__content__section">
+            <p class="main__folder-info__content__section__label">files:</p>
+            <p class="main__folder-info__content__section__value">342</p>
+          </div>
+
+          <div class="main__folder-info__content__section">
+            <p class="main__folder-info__content__section__label">Folders:</p>
+            <p class="main__folder-info__content__section__value">132</p>
+          </div>
+
+
+          <hr class="main__folder-info__content__line">
+
+
+          <div class="main__folder-info__content__section">
+            <p class="main__folder-info__content__section__label">Created:</p>
+            <p class="main__folder-info__content__section__value">martes, 24 febrero 2024, 8:32:23 pm</p>
+          </div>
+
+          <div class="main__folder-info__content__section">
+            <p class="main__folder-info__content__section__label">Changed:</p>
+            <p class="main__folder-info__content__section__value">jueves, 4 maro 2024, 8:32:23 pm</p>
+          </div>
+
+          <div class="main__folder-info__content__section">
+            <p class="main__folder-info__content__section__label">Opened:</p>
+            <p class="main__folder-info__content__section__value">lunes, 27 junio 2024, 8:32:23 pm</p>
+          </div>
+
+
+          <hr class="main__folder-info__content__line">
+
+          <div class="main__folder-info__content__actions">
+            <button class="main__folder-info__content__actions__read-btn info-btn">READ</button>
+            <button class="main__folder-info__content__actions__save-btn info-btn">SAVE</button>
+          
+
+          </div>
+
+
+        </div>
+
+        </div> -->
+
+
+
+
+
+
+      <!-- <div class="main__menu">
+
+    </div> -->
+
+      <div class="main__info">
+        <p class="main__info__path"></p>
+        <div class="main__info__files">
+          <p class="main__info__files__seccion">NAME</p>
+          <p class="main__info__files__seccion">CREATED</p>
+          <p class="main__info__files__seccion">TYPE</p>
+          <p class="main__info__files__seccion">SIZE</p>
+        </div>
+      </div>
+
+      <div class="main__content"></div>
+    </main>
+
+
+
+    <template id="template-file">
+      <div class="main__content__file" id="" data-type="">
+        <div class="main__content__file__icon">
+          <i class=""></i>
+        </div>
+
+        <div class="main__content__file__info">
+          <div class="main__content__file__info__name">file.txt</div>
+          <div class="main__content__file__info__specifications">
+            <div class="main__content__file__info__specifications__type">
+              text
+            </div>
+            <div class="main__content__file__info__specifications__date">
+              09/06/24
+            </div>
+            <div class="main__content__file__info__specifications__size">
+              90,87kb
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="template-file-info">
+      <div class="main__file-info">
+
+      </div>
+    </template>
+
+    <script defer type="module" src="../controller/controller.mjs"></script>
+    <!-- <script defer type="module" src="..\controller\controller.mjs"></script> -->
+  </body>
+</html>

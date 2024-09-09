@@ -1,0 +1,38 @@
+@import url('../utilities/_mixins.scss');
+
+@import url('./components/_createFilePanel.scss');
+
+
+
+.main__create-folder {
+  @include createPanel(500px, 240px);
+}
+
+.main__create-folder__header {
+  @extend .main__create-file__header;
+}
+
+.main__create-folder__header__icon {
+  @extend .main__create-file__header__icon;
+}
+
+.main__create-folder__header__input {
+  @extend .main__create-file__header__input;
+}
+
+.main__create-folder__path {
+  @extend .main__create-file__path;
+}
+
+.main__create-folder__actions {
+  @extend .main__create-file__actions;
+  margin-top: 30px;
+}
+
+.main__create-folder__actions__create-btn {
+  @include createPanelBtn(100px, 50px, #0077ff, #083dff);
+} 
+
+.main__create-folder__actions__cancel-btn {
+  @include createPanelBtn(100px, 50px, #ee0000, #dd0000);
+}

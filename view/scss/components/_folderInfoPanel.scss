@@ -1,0 +1,70 @@
+
+@import url('../utilities/_mixins.scss');
+
+@import url('../components/_fileInfoPanel.scss');
+
+
+
+
+.main__folder-info {
+  @include infoPanel(450px, 550px)
+}
+
+.main__folder-info__header {
+  @extend .main__file-info__header;
+}
+
+.main__folder-info__header__icon {
+  @extend .main__file-info__header__icon;
+}
+
+.main__folder-info__header__title {
+  @extend .main__file-info__header__title;
+}
+
+.main__folder-info__content {
+  @extend .main__file-info__content;
+}
+
+.main__folder-info__content__line {
+  @extend .main__file-info__content__line;
+}
+
+.main__folder-info__content__title {
+  @extend .main__file-info__content__title;
+}
+
+.main__folder-info__content__title__icon {
+  @extend .main__file-info__content__title__icon;
+}
+
+.main__folder-info__content__title__name {
+  @extend .main__file-info__content__title__name;
+}
+
+.main__folder-info__content__section {
+  @extend .main__file-info__content__section;
+}
+
+.main__folder-info__content__section__label {
+  @extend .main__file-info__content__section__label;
+}
+
+.main__folder-info__content__section__value {
+  @extend .main__file-info__content__section__value;
+}
+
+.main__folder-info__content__actions {
+  @extend .main__file-info__content__actions;
+  width: 230px;
+}
+
+.main__folder-info__content__actions__read-btn {
+  @include infoPanelBtn(#363a3f, #1E212B);
+}
+
+.main__folder-info__content__actions__save-btn {
+  @include infoPanelBtn(#1A659E, #1A6587);
+}
+
+

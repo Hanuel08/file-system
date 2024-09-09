@@ -1,0 +1,97 @@
+@import url('../utilities/_mixins.scss');
+
+
+.main__create-file {
+  @include createPanel(500px, 450px);
+  
+  .ti-file-filled {
+    color: #ccc;
+  }
+}
+
+.main__create-file__header {
+  //@include createPanelHeader(500px, 80px);
+  width: 500px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0 0 0;
+}
+
+.main__create-file__header__icon {
+  //@include createPanelHeaderIcon(60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+
+  .ti {
+    transform: scale(3.5);
+  }
+}
+
+.main__create-file__header__input {
+  //@include createPanelHeaderInput();
+  width: 400px;
+  height: 30px;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  color: #444;
+  font-size: 18px;
+  padding: 15px;
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  
+  &:hover {
+    border: 1px solid #1bf;
+  }
+}
+
+.main__create-file__path {
+  font-size: 14px;
+  width: 480px;
+  height: 20px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.main__create-file__actions {
+  width: 240px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 260px;
+}
+
+.main__create-file__actions__create-btn {
+  @include createPanelBtn(100px, 50px, #0077ff, #083dff);
+} 
+
+.main__create-file__actions__cancel-btn {
+  @include createPanelBtn(100px, 50px, #ee0000, #dd0000);
+}
+
+.main__create-file__content {
+  resize: none;
+  width: 460px;
+  height: 160px;
+  padding: 20px;
+  border: 1px solid #eee;
+  font-size: 16px;
+  color: #444;
+  outline: none;
+  border-radius: 10px;
+  font-family: 'Onest', sans-serif;
+
+  &:focus {
+    border: 1px solid #1bf;
+  }
+}

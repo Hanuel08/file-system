@@ -1,0 +1,129 @@
+
+
+
+
+@mixin centerDisplay ($position) {
+  position: $position;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+
+@mixin createPanel ($w, $h) {
+  width: $w;
+  height: $h;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #1bf;
+  border-radius: 10px;
+  margin: 100px auto;
+  position: absolute;
+  background-color: #fff;
+  z-index: 1000;
+  padding: 15px;
+  @include centerDisplay(float);
+}
+
+
+/* @mixin createPanelHeader($w, $h) {
+  width: $w;
+  height: $h;
+  //border: 1px solid #00bb11;
+  display: flex;
+  align-items: center;
+  margin: 10px 0 0 0;
+}
+
+@mixin createPanelHeaderIcon($dimensions) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $dimensions;
+  height: $dimensions;
+  margin-right: 10px;
+
+  .ti {
+    transform: scale(3.5);
+  }
+}
+
+
+@mixin createPanelHeaderInput ($w: 400px, $h: 30px) {
+  width: $w;
+  height: $h;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  color: #444;
+  font-size: 18px;
+  padding: 15px;
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  
+  &:hover {
+    border: 1px solid #1bf;
+  }
+} */
+
+
+
+
+@mixin createPanelBtn ($w, $h, $bg, $hover) {
+  width: $w;
+  height: $h;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover;
+  }
+}
+
+
+
+@mixin infoPanel ($w, $h) {
+  display: flex;
+  flex-direction: column;
+  width: $w;
+  height: $h;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  margin: 20px auto;
+  position: fixed;
+  z-index: 1000;
+  padding: 5px 15px;
+  background-color: #fff;
+  @include centerDisplay(fixed);
+}
+
+
+@mixin infoPanelBtn ($bg, $hover) {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  background-color: $bg;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover;
+  }
+}
+
