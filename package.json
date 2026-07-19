@@ -1,0 +1,13 @@
+{
+  "name": "file-system",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Web-based file explorer",
+  "scripts": {
+    "start": "node server/index.mjs",
+    "dev": "node --watch server/index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

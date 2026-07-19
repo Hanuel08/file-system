@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FileSystem</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.45.0/dist/tabler-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__brand">
+      <i class="ti ti-folder sidebar__brand-icon"></i>
+      <span class="sidebar__brand-text">FileSystem</span>
+    </div>
+    <nav class="sidebar__nav">
+      <button class="sidebar__nav-btn active" data-action="browse">
+        <i class="ti ti-home"></i> Inicio
+      </button>
+    </nav>
+  </aside>
+
+  <div class="main-wrapper">
+    <header class="toolbar">
+      <div class="toolbar__breadcrumb" id="breadcrumb"></div>
+      <div class="toolbar__actions">
+        <div class="toolbar__search">
+          <i class="ti ti-search toolbar__search-icon"></i>
+          <input type="text" id="searchInput" class="toolbar__search-input" placeholder="Buscar...">
+        </div>
+        <button class="toolbar__btn" id="sortBtn" title="Ordenar">
+          <i class="ti ti-sort-ascending-letters"></i>
+        </button>
+        <button class="toolbar__btn" id="backBtn" title="Volver" disabled>
+          <i class="ti ti-arrow-left"></i>
+        </button>
+        <button class="toolbar__btn" id="refreshBtn" title="Actualizar">
+          <i class="ti ti-refresh"></i>
+        </button>
+        <div class="toolbar__separator"></div>
+        <button class="toolbar__btn toolbar__btn--primary" id="newFolderBtn" title="Nueva carpeta">
+          <i class="ti ti-folder-plus"></i>
+        </button>
+        <button class="toolbar__btn toolbar__btn--primary" id="newFileBtn" title="Nuevo archivo">
+          <i class="ti ti-file-plus"></i>
+        </button>
+        <button class="toolbar__btn toolbar__btn--danger" id="deleteBtn" title="Eliminar" disabled>
+          <i class="ti ti-trash"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="content__header">
+        <span class="content__col content__col--name">Nombre</span>
+        <span class="content__col content__col--date">Modificado</span>
+        <span class="content__col content__col--size">Tamaño</span>
+      </div>
+      <div class="content__list" id="fileList"></div>
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal" id="modalContent"></div>
+  </div>
+
+  <template id="tmpl-file-row">
+    <div class="file-row" data-type="" data-id="">
+      <div class="file-row__icon"><i class=""></i></div>
+      <span class="file-row__name"></span>
+      <span class="file-row__date"></span>
+      <span class="file-row__size"></span>
+    </div>
+  </template>
+
+  <script type="module" src="js/app.mjs"></script>
+</body>
+</html>
